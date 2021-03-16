@@ -64,7 +64,7 @@ public class Options extends AppCompatActivity {
         buttonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Options.this, Menu.class);
+                Intent intent = new Intent(getApplicationContext(), Menu.class);
                 startActivity(intent);
             }
         });

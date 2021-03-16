@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -17,6 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,12 +27,14 @@ public class MainActivity extends AppCompatActivity {
     static final int COORDINATE_CENTRE = 460;
     static final int COORDINATE_RIGHT = 910;
     static final int DELTA_COORDINATES = COORDINATE_RIGHT - COORDINATE_CENTRE;
+    static final int BOTTOM_MARGIN_TOP_POSITION = 300;
 
     private ImageView imageBlockOne;
     private ImageView imageBlockTwo;
     private ImageView imageBlockTree;
     private ImageView imageBlockZero;
     private ImageView imageBlockFour;
+    private ImageView imageBlockFive;
     private RelativeLayout layout;
     private boolean isBlockUp;
 
@@ -56,10 +60,17 @@ public class MainActivity extends AppCompatActivity {
     public static boolean enableSteps = true;
     public static boolean enableChronometer = true;
 
+    private boolean endGame = false; // what?????
+
+    private static MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.music);
+        mediaPlayer.start();
 
         // Initialize Buttons
 
@@ -77,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         imageBlockTwo = findViewById(R.id.blockTwo);
         imageBlockTree = findViewById(R.id.blockTree);
         imageBlockFour = findViewById(R.id.blockFour);
+        imageBlockFive = findViewById(R.id.blockFive);
 
         imageBlockZero = findViewById(R.id.blockZero);
 
@@ -86,11 +98,12 @@ public class MainActivity extends AppCompatActivity {
         listBlocks.add(new Block(imageBlockTwo));
         listBlocks.add(new Block(imageBlockTree));
         listBlocks.add(new Block(imageBlockFour));
+        listBlocks.add(new Block(imageBlockFive));
 
         blockZero = new Block(imageBlockZero);
 
         textTime = findViewById(R.id.textTime);
-        textTime.setTextSize(20f);
+        textTime.setTextSize(25f);
 
         if (enableChronometer) {
             textTime.setVisibility(View.VISIBLE);
@@ -102,16 +115,15 @@ public class MainActivity extends AppCompatActivity {
         startTimer();
 
         textSteps = findViewById(R.id.textSteps);
-        textSteps.setTextSize(20f);
+        textSteps.setTextSize(25f);
 
         if (enableSteps) {
             textSteps.setText("Steps: " + Integer.toString(countSteps));
-        }
-        else {
+        } else {
             textSteps.setVisibility(View.INVISIBLE);
         }
 
-        //createStartPositionBoxes();
+        createStartPositionBoxes();
 
         //checkDisplay();
 
@@ -120,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Menu.class);
+                Intent intent = new Intent(getApplicationContext(), Menu.class);
                 startActivity(intent);
             }
         });
@@ -152,33 +164,64 @@ public class MainActivity extends AppCompatActivity {
                 movingRightImage();
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mediaPlayer.stop();
     }
 
     private void createStartPositionBoxes() {
 
         blockZero.setPosition(POSITION.LEFT);
-        blockZero.setLeftMargin(COORDINATE_LEFT);
         blockZero.setBottomMargin(10);
+
+        // середина - 100
 
         int leftMarginTmp = 10;
         int bottomMarginTmp = 0;
+        int blockHeight = 40;
 
-        for(Block block : listBlocks)
-        {
+        for (Block block : listBlocks) {
             block.setVisible(false);
         }
 
-        for (int i = countDisks-1; i>=0; i--)
-        {
+        for (int i = countDisks - 1; i > -1; i--) {
             Block block = listBlocks.get(i);
             block.setVisible(true);
             block.setLeftMargin(leftMarginTmp);
-            leftMarginTmp +=10;
-
+            leftMarginTmp += 12;
             block.setBottomMargin(bottomMarginTmp + 10);
-            bottomMarginTmp = bottomMarginTmp + 10 + block.getHeight();
+            bottomMarginTmp = bottomMarginTmp + 10 + blockHeight;
 
         }
+
+        blockZero.setLeftMargin(listBlocks.get(0).getLeftMargin());
 
     }
 
@@ -234,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
             if (block.isUp()) {
                 blockUpped = block;
             }
+
         }
 
         if (positionCursor == POSITION.CENTRE) {
@@ -293,9 +337,12 @@ public class MainActivity extends AppCompatActivity {
 
         Block highestBlock = null;
         int hiestCoordinates = 0;
+        int i=0;
         for (Block block : listBlocks) {
 
-            if (block.getPosition() != positionCursor || block.isUp()) {
+            //System.out.println(Integer.toString(i++) + " " + block);
+
+            if (block.getPosition() != positionCursor || block.isUp() || !block.isVisible()) {
                 continue;
             }
             if (block.getBottomMargin() > hiestCoordinates) {
@@ -303,6 +350,7 @@ public class MainActivity extends AppCompatActivity {
                 hiestCoordinates = block.getBottomMargin();
             }
         }
+       // Log.e("Hiest", "______");
         return highestBlock;
     }
 
@@ -310,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
         Block currentUpBlock = getHighestBox();
 
         if (!isBlockUp && currentUpBlock != null) {
-            currentUpBlock.setBottomMargin(220);
+            currentUpBlock.setBottomMargin(BOTTOM_MARGIN_TOP_POSITION);
             currentUpBlock.setUp(true);
             isBlockUp = true;
         }
@@ -337,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (hiestBlock != null) {
-                blockUpped.setBottomMargin(hiestBlock.getBottomMargin() + hiestBlock.getHeight() + 20);
+                blockUpped.setBottomMargin(hiestBlock.getBottomMargin() + hiestBlock.getHeight() + 10);
             } else {
                 blockUpped.setBottomMargin(20);
             }
@@ -347,20 +395,45 @@ public class MainActivity extends AppCompatActivity {
             textSteps.setText("Steps: " + Integer.toString(countSteps));
         }
 
+
+        checkEndGame();
+
+    }
+
+    private void checkEndGame() {
         boolean isOver = true;
         Block tmpBlock = listBlocks.get(0);
         for (Block block : listBlocks) {
-            if (block.getPosition() != tmpBlock.getPosition()) {
+            if (block.getPosition() != tmpBlock.getPosition()
+                    && block.isVisible()) {
                 isOver = false;
                 break;
             }
             tmpBlock = block;
         }
 
+        if (isOver && listBlocks.get(0).getPosition() == POSITION.LEFT)
+        {
+            return;
+        }
+
         if (isOver) {
             stopTimer();
-            //textView.setText("OVER");
+            Intent intent = new Intent(getApplicationContext(), EndGame.class);
+
+            timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
+
+            int secs = (int) (updatedTime / 1000);
+            int mins = secs / 60;
+            secs = secs % 60;
+            int milliseconds = (int) (updatedTime % 1000);
+            String time = mins + ":" + String.format("%02d", secs) + ":" + String.format("%03d", milliseconds);
+            System.out.println(time + "||" + countSteps);
+            intent.putExtra("time", time);
+            intent.putExtra("steps", countSteps);
+            startActivity(intent);
         }
+
     }
 
     private void movingBlockZeroRight() {

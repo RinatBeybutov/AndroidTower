@@ -80,11 +80,11 @@ public class Block {
     @Override
     public String toString() {
         return "Block {" +
-                ", name= " + mImageView.getDrawable() +
-                ", position= " + position +
-                ", isUp= " + isUp +
-                ", bottomMargin=" + this.getBottomMargin() +
-                ", visible=" + this.isVisible() +
+                ", width = " + mImageView.getWidth() +
+                ", position = " + position +
+                ", isUp = " + isUp +
+                ", bottomMargin = " + this.getBottomMargin() +
+                ", visible = " + this.isVisible() +
                 '}';
     }
 }

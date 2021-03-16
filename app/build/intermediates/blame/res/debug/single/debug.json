@@ -4,28 +4,12 @@
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box2.png"
     },
     {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu.xml.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_menu.xml"
-    },
-    {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_options.xml.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_options.xml"
     },
     {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box1.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box1.png"
     },
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -36,20 +20,12 @@
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box4.png"
     },
     {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box0.png.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box0.png"
-    },
-    {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -60,28 +36,24 @@
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tower.jpg.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\tower.jpg"
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_help.xml.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_help.xml"
     },
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box3.png.flat",
-        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box3.png"
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tower_help.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\tower_help.png"
     },
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_end_game.xml.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_end_game.xml"
     },
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -90,5 +62,57 @@
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tower.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\tower.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu.xml.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box1.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box1.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box5.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box5.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_menu_tower.jpg.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\menu_tower.jpg"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\raw_music.mp3.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\raw\\music.mp3"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box3.png.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box3.png"
     }
 ]

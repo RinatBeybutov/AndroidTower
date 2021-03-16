@@ -787,6 +787,7 @@ drawable box1
 drawable box2
 drawable box3
 drawable box4
+drawable box5
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -797,6 +798,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable menu_tower
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -812,6 +814,7 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable tower
+drawable tower_help
 id ALT
 id CTRL
 id FUNCTION
@@ -890,6 +893,7 @@ id barrier
 id baseline
 id beginOnFirstDraw
 id beginning
+id blockFive
 id blockFour
 id blockOne
 id blockTree
@@ -906,9 +910,13 @@ id buttonHelp
 id buttonLeft
 id buttonMenuInGame
 id buttonMenuInOptions
+id buttonMenuInRefresh
+id buttonMenuOnHelp
 id buttonOptions
 id buttonPanel
+id buttonRestart
 id buttonRight
+id buttonSaveRecrord
 id buttonStart
 id buttonUp
 id center
@@ -966,6 +974,10 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageTower1
+id imageTower2
+id imageTower3
+id imageTowerHelp
 id imageView3
 id info
 id invisible
@@ -1061,6 +1073,8 @@ id tag_unhandled_key_listeners
 id text
 id text2
 id textInOptions
+id textInfo
+id textRecord
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textSteps
@@ -1123,6 +1137,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_end_game
+layout activity_help
 layout activity_main
 layout activity_menu
 layout activity_options
@@ -1139,6 +1155,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw music
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
