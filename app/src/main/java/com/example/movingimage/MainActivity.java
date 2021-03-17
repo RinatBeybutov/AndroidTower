@@ -2,12 +2,15 @@ package com.example.movingimage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.preference.Preference;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -64,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static MediaPlayer mediaPlayer;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.music);
         mediaPlayer.start();
+
+
 
         // Initialize Buttons
 
@@ -166,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     @Override
     protected void onStart() {
@@ -431,6 +439,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(time + "||" + countSteps);
             intent.putExtra("time", time);
             intent.putExtra("steps", countSteps);
+
             startActivity(intent);
         }
 

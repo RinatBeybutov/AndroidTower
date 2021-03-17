@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">MovingImage</string>
     <string name="nameMenuButton">menu</string>
+    <string name="nameHelpButton">help</string>
+    <string name="nameOptionsButton">options</string>
+    <string name="nameStartButton">start</string>
+    <string name="nameRecordsButton">records</string>
     <string name="chronometr">Включить секундомер</string>
     <string name="steps">Включить подсчет шагов</string>
     <string name="countDisks">Количество колец:</string>

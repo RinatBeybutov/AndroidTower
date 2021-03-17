@@ -19,12 +19,18 @@ public class Menu extends AppCompatActivity {
         Button buttonStart = findViewById(R.id.buttonStart);
         Button buttonHelp = findViewById(R.id.buttonHelp);
         Button buttonOptions = findViewById(R.id.buttonOptions);
-
-        buttonStart.setText("Start");
-        buttonHelp.setText("Help");
-        buttonOptions.setText("Options");
+        Button buttonRecords = findViewById(R.id.buttonRecords);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        buttonRecords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Records.class);
+                startActivity(intent);
+            }
+        });
+
 
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override

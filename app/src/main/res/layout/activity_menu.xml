@@ -17,13 +17,13 @@
             android:id="@+id/buttonHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonRecords"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="10dp"
-            android:text="Button" />
+            android:text="@string/nameHelpButton" />
 
         <Button
             android:id="@+id/buttonStart"
@@ -35,7 +35,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="10dp"
-            android:text="Button" />
+            android:text="@string/nameStartButton" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -59,6 +59,18 @@
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="10dp"
-            android:text="Button" />
+            android:text="@string/nameOptionsButton" />
+
+        <Button
+            android:id="@+id/buttonRecords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/nameRecordsButton" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
