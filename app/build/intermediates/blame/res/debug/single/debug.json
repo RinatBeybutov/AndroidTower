@@ -114,5 +114,9 @@
     {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_box3.png.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\drawable\\box3.png"
+    },
+    {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_records.xml.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_records.xml"
     }
 ]
