@@ -25,7 +25,7 @@ public class Options extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         Button buttonMenu = findViewById(R.id.buttonMenuInOptions);
 
@@ -38,10 +38,10 @@ public class Options extends AppCompatActivity {
         RadioButton button4 = findViewById(R.id.buttonCount4);
         RadioButton button5 = findViewById(R.id.buttonCount5);
 
-        checkChronometer.setChecked(MainActivity.enableChronometer);
-        checkSteps.setChecked(MainActivity.enableSteps);
+        checkChronometer.setChecked(second_main.enableChronometer);
+        checkSteps.setChecked(second_main.enableSteps);
 
-        switch (MainActivity.countDisks){
+        switch (second_main.countDisks){
             case 3:
                 button3.setChecked(true);
                 break;
@@ -77,10 +77,10 @@ public class Options extends AppCompatActivity {
             CheckBox checkBoxTmp = (CheckBox) v;
             switch (checkBoxTmp.getId()){
                 case R.id.checkBoxSteps:
-                    MainActivity.enableSteps = checkSteps.isChecked();
+                    second_main.enableSteps = checkSteps.isChecked();
                     break;
                 case R.id.checkBoxChonometr:
-                    MainActivity.enableChronometer = checkChronometer.isChecked();
+                    second_main.enableChronometer = checkChronometer.isChecked();
                     break;
             }
         }
@@ -93,14 +93,13 @@ public class Options extends AppCompatActivity {
             RadioButton buttonTmp = (RadioButton) v;
             switch (buttonTmp.getId()){
                 case R.id.buttonCount3:
-                    MainActivity.countDisks = 3;
-                    Log.e("OptionsClick", "3");
+                    second_main.countDisks = 3;
                     break;
                 case R.id.buttonCount4:
-                    MainActivity.countDisks = 4;
+                    second_main.countDisks = 4;
                     break;
                 case R.id.buttonCount5:
-                    MainActivity.countDisks = 5;
+                    second_main.countDisks = 5;
                     break;
             }
         }

@@ -21,7 +21,7 @@ public class Menu extends AppCompatActivity {
         Button buttonOptions = findViewById(R.id.buttonOptions);
         Button buttonRecords = findViewById(R.id.buttonRecords);
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         buttonRecords.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class Menu extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), second_main.class);
                 startActivity(intent);
             }
         });

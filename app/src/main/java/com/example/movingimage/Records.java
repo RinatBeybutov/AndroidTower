@@ -2,6 +2,7 @@ package com.example.movingimage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,14 +25,13 @@ public class Records extends AppCompatActivity {
 
     SharedPreferences mPreferences;
 
+    @SuppressLint("CommitPrefEdits")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        Button buttonMenu = findViewById(R.id.buttonMenuInRecords);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         textTitle = findViewById(R.id.textTitle);
         textTitle3 = findViewById(R.id.textTitle3);
@@ -43,21 +43,27 @@ public class Records extends AppCompatActivity {
         textRecords5 = findViewById(R.id.textRecordInRecords5);
 
         textTitle.setText("Records");
-        textRecords3.setTextSize(20f);
-        textRecords4.setTextSize(20f);
-        textRecords5.setTextSize(20f);
+        textRecords3.setTextSize(10f);
+        textRecords4.setTextSize(10f);
+        textRecords5.setTextSize(10f);
 
         textTitle3.setText("3 Диска");
         textTitle4.setText("4 Диска");
         textTitle5.setText("5 Диска");
 
-        textTitle.setTextSize(40f);
-        textTitle3.setTextSize(25f);
-        textTitle4.setTextSize(25f);
-        textTitle5.setTextSize(25f);
+        textTitle.setTextSize(30f);
+        textTitle3.setTextSize(15f);
+        textTitle4.setTextSize(15f);
+        textTitle5.setTextSize(15f);
 
 
         mPreferences = getSharedPreferences("mySettings", Context.MODE_PRIVATE);
+
+        /*mPreferences.edit().remove("record3");
+        mPreferences.edit().remove("record4");
+        mPreferences.edit().remove("record5");
+        mPreferences.edit().clear().apply();*/
+
 
         if(mPreferences.contains("record3"))
         {
@@ -79,16 +85,6 @@ public class Records extends AppCompatActivity {
         } else {
             textRecords5.setText("---");
         }
-
-        buttonMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Menu.class);
-                startActivity(intent);
-            }
-        });
-
-
 
     }
 }

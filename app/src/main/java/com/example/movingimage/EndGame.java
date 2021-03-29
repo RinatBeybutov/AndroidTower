@@ -52,7 +52,7 @@ public class EndGame extends AppCompatActivity {
         buttonRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), second_main.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +64,7 @@ public class EndGame extends AppCompatActivity {
 
                 if (newHighscore(steps, time)) {
                     SharedPreferences.Editor ed = mPreferences.edit();
-                    switch (MainActivity.countDisks) {
+                    switch (second_main.countDisks) {
                         case 3:
                             ed.putString("record3", record);
                             break;
@@ -75,7 +75,6 @@ public class EndGame extends AppCompatActivity {
                             ed.putString("record5", record);
                             break;
                     }
-
                     ed.commit();
                 }
             }
@@ -87,7 +86,7 @@ public class EndGame extends AppCompatActivity {
 
         String oldRecord = "";
 
-        switch (MainActivity.countDisks) {
+        switch (second_main.countDisks) {
             case 3:
                 if (!mPreferences.contains("record3")) {
                     return true;

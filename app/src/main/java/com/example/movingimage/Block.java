@@ -59,6 +59,7 @@ public class Block {
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) mImageView.getLayoutParams();
         params.leftMargin = leftMrgn;
         mImageView.setLayoutParams(params);
+        //mImageView.getPivotX()
     }
 
     public int getWidth() {

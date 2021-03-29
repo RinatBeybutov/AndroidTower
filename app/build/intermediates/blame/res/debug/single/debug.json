@@ -72,6 +72,10 @@
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_menu.xml"
     },
     {
+        "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_second_main.xml.flat",
+        "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\layout\\activity_second_main.xml"
+    },
+    {
         "merged": "D:\\JAVA\\MovingImage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "D:\\JAVA\\MovingImage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },

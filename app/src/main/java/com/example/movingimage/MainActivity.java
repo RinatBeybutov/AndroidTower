@@ -2,17 +2,13 @@ package com.example.movingimage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.preference.Preference;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +17,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -97,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         imageBlockFour = findViewById(R.id.blockFour);
         imageBlockFive = findViewById(R.id.blockFive);
 
-        imageBlockZero = findViewById(R.id.blockZero);
+        imageBlockZero = findViewById(R.id.blockZeros);
 
         listBlocks = new ArrayList<>();
 
@@ -109,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         blockZero = new Block(imageBlockZero);
 
-        textTime = findViewById(R.id.textTime);
+        textTime = findViewById(R.id.textTimes);
         textTime.setTextSize(25f);
 
         if (enableChronometer) {
@@ -208,8 +203,6 @@ public class MainActivity extends AppCompatActivity {
 
         blockZero.setPosition(POSITION.LEFT);
         blockZero.setBottomMargin(10);
-
-        // середина - 100
 
         int leftMarginTmp = 10;
         int bottomMarginTmp = 0;

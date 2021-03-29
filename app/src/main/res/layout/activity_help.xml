@@ -16,36 +16,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="0dp"
             app:srcCompat="@drawable/tower_help" />
-
-        <Button
-            android:id="@+id/buttonMenuOnHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/nameMenuButton" />
 
         <TextView
             android:id="@+id/textInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/buttonMenuOnHelp"
-            android:layout_below="@+id/imageTowerHelp"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@+id/imageTowerHelp"
             android:text="TextView" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
