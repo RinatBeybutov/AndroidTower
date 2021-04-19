@@ -98,10 +98,6 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:21:27-74
-activity#com.example.movingimage.MainActivity
-ADDED from D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:24:9-50
-	android:name
-		ADDED from D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:24:19-47
 activity#com.example.movingimage.MyApp
 ADDED from D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:25:9-28:72
 	android:screenOrientation

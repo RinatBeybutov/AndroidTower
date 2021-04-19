@@ -7,7 +7,6 @@ import android.widget.RelativeLayout;
 public class Block {
 
     private ImageView mImageView;
-    private POSITION position;
     private boolean isUp;
     private boolean isVisible;
 
@@ -35,7 +34,6 @@ public class Block {
 
     public Block(ImageView imageView) {
         mImageView = imageView;
-        position = POSITION.LEFT;
         isVisible = mImageView.getVisibility() == View.VISIBLE;
     }
 
@@ -70,19 +68,10 @@ public class Block {
         return mImageView.getHeight();
     }
 
-    public POSITION getPosition() {
-        return position;
-    }
-
-    public void setPosition(POSITION position) {
-        this.position = position;
-    }
-
     @Override
     public String toString() {
         return "Block {" +
                 ", width = " + mImageView.getWidth() +
-                ", position = " + position +
                 ", isUp = " + isUp +
                 ", bottomMargin = " + this.getBottomMargin() +
                 ", visible = " + this.isVisible() +

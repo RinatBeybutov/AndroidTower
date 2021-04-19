@@ -1,9 +1,10 @@
-package com.example.movingimage;
+    package com.example.movingimage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -92,12 +93,14 @@ public class second_main extends AppCompatActivity {
     private int centerCoordinate = 0;
     private int rightCoordinate = 0;
 
-    private Toolbar toolbar;
+    private static MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_main);
+
+        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.music);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
@@ -197,6 +200,18 @@ public class second_main extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
+    }
+
     private void startTimer() {
         startTime = SystemClock.uptimeMillis();
         handler.postDelayed(updateTimerThread, 0);
@@ -223,13 +238,10 @@ public class second_main extends AppCompatActivity {
     };
 
     private void startPosition() {
-        for(int i=0; i < countDisks; i++) {
+        for (int i = 0; i < countDisks; i++) {
             listBlocksL.get(i).setVisible(true);
         }
-
         blockZero.setLeftMargin(100);
-
-        //Log.e("Start Position " , String.valueOf(width));
     }
 
     private void initializationBlocks() {
@@ -273,15 +285,15 @@ public class second_main extends AppCompatActivity {
         listBlocksR.add(blockR2);
         listBlocksR.add(blockR1);
 
-        for(Block block : listBlocksC) {
+        for (Block block : listBlocksC) {
             block.setVisible(false);
         }
 
-        for(Block block : listBlocksR) {
+        for (Block block : listBlocksR) {
             block.setVisible(false);
         }
 
-        for(Block block : listBlocksL) {
+        for (Block block : listBlocksL) {
             block.setVisible(false);
         }
 
@@ -289,18 +301,18 @@ public class second_main extends AppCompatActivity {
 
     private void movingUp() {
 
-        if(leftCoordinate == 0) {
+        if (leftCoordinate == 0) {
             int width = upLayout.getWidth();
-            leftCoordinate = width / 6 - boxZero.getWidth()/2;
-            centerCoordinate = width / 6 + width / 3 - boxZero.getWidth()/2;
-            rightCoordinate = width - width / 6 - boxZero.getWidth()/2;
+            leftCoordinate = width / 6 - boxZero.getWidth() / 2;
+            centerCoordinate = width / 6 + width / 3 - boxZero.getWidth() / 2;
+            rightCoordinate = width - width / 6 - boxZero.getWidth() / 2;
             blockZero.setVisible(true);
             blockZero.setLeftMargin(leftCoordinate);
         }
 
         isUp = true;
         Block currentUpBlock = getHighestBlock();
-        if(currentUpBlock != null) {
+        if (currentUpBlock != null) {
             currentUpBlock.setUp(true);
             currentUpBlock.setBottomMargin(layoutLeft.getHeight() - 10 - currentUpBlock.getHeight());
         }
@@ -310,7 +322,7 @@ public class second_main extends AppCompatActivity {
 
         ArrayList<Block> currentListBlocks = null;
 
-        switch (CURRENT_POSITION){
+        switch (CURRENT_POSITION) {
             case LEFT:
                 currentListBlocks = listBlocksL;
                 break;
@@ -359,7 +371,7 @@ public class second_main extends AppCompatActivity {
 
         boolean isOver = false;
 
-        if(CURRENT_POSITION == POSITION.CENTRE) {
+        if (CURRENT_POSITION == POSITION.CENTRE) {
 
             int countVisible = 0;
             for (Block block : listBlocksC) {
@@ -368,12 +380,12 @@ public class second_main extends AppCompatActivity {
                 }
             }
 
-            if(countVisible == countDisks) {
+            if (countVisible == countDisks) {
                 isOver = true;
             }
         }
 
-        if(CURRENT_POSITION == POSITION.RIGHT) {
+        if (CURRENT_POSITION == POSITION.RIGHT) {
             int countVisible = 0;
             for (Block block : listBlocksR) {
                 if (block.isVisible()) {
@@ -381,12 +393,12 @@ public class second_main extends AppCompatActivity {
                 }
             }
 
-            if(countVisible == countDisks) {
+            if (countVisible == countDisks) {
                 isOver = true;
             }
         }
 
-        if(isOver) {
+        if (isOver) {
             stopTimer();
             Intent intent = new Intent(getApplicationContext(), EndGame.class);
 
@@ -409,7 +421,7 @@ public class second_main extends AppCompatActivity {
 
         if (CURRENT_POSITION == POSITION.RIGHT) {
 
-            if(isUp) {
+            if (isUp) {
                 int width = 0;
                 for (Block block : listBlocksR) {
                     if (block.isUp()) {
@@ -429,12 +441,11 @@ public class second_main extends AppCompatActivity {
             }
             CURRENT_POSITION = POSITION.CENTRE;
             blockZero.setLeftMargin(centerCoordinate);
-            //textPosition.setText("2");
             return;
         }
 
         if (CURRENT_POSITION == POSITION.CENTRE) {
-            if(isUp) {
+            if (isUp) {
                 int width = 0;
                 for (Block block : listBlocksC) {
                     if (block.isUp()) {
@@ -454,8 +465,6 @@ public class second_main extends AppCompatActivity {
             }
             CURRENT_POSITION = POSITION.LEFT;
             blockZero.setLeftMargin(leftCoordinate);
-            //textPosition.setText("1");
-            return;
         }
     }
 
@@ -463,7 +472,7 @@ public class second_main extends AppCompatActivity {
 
         if (CURRENT_POSITION == POSITION.LEFT) {
 
-            if(isUp) {
+            if (isUp) {
                 int width = 0;
                 for (Block block : listBlocksL) {
                     if (block.isUp()) {
@@ -483,13 +492,12 @@ public class second_main extends AppCompatActivity {
             }
             CURRENT_POSITION = POSITION.CENTRE;
             blockZero.setLeftMargin(centerCoordinate);
-            //textPosition.setText("2");
             return;
         }
 
         if (CURRENT_POSITION == POSITION.CENTRE) {
 
-            if(isUp) {
+            if (isUp) {
                 int width = 0;
                 for (Block block : listBlocksC) {
                     if (block.isUp()) {
@@ -509,21 +517,18 @@ public class second_main extends AppCompatActivity {
             }
             CURRENT_POSITION = POSITION.RIGHT;
             blockZero.setLeftMargin(rightCoordinate);
-            //textPosition.setText("3");
-            return;
         }
 
     }
 
-    private Block getHighestBlock()
-    {
+    private Block getHighestBlock() {
         Block highestBlock = null;
         int highestCoordinates = 0;
         int i = 0;
 
         ArrayList<Block> currentListBlocks = null;
 
-        switch (CURRENT_POSITION){
+        switch (CURRENT_POSITION) {
             case LEFT:
                 currentListBlocks = listBlocksL;
                 break;
@@ -535,11 +540,11 @@ public class second_main extends AppCompatActivity {
                 break;
         }
 
-        for(Block block : currentListBlocks) {
-            if(!block.isVisible() || block.isUp()) {
+        for (Block block : currentListBlocks) {
+            if (!block.isVisible() || block.isUp()) {
                 continue;
             }
-            if(block.getBottomMargin() > highestCoordinates) {
+            if (block.getBottomMargin() > highestCoordinates) {
                 highestBlock = block;
                 highestCoordinates = block.getBottomMargin();
             }
@@ -547,16 +552,4 @@ public class second_main extends AppCompatActivity {
         }
         return highestBlock;
     }
-
-    private void checkPostition() {
-        System.out.println("left = " + boxL5.getLeft());
-        System.out.println("Right = " + boxL5.getRight());
-        System.out.println("top = " + boxL5.getTop());
-        System.out.println("bot = " + boxL5.getBottom());
-        System.out.println("width = " + boxL5.getWidth());
-        System.out.println("layout " + layoutLeft.getHeight());
-
-
-    }
-
 }
