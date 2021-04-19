@@ -26,48 +26,49 @@
 18-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:9:9-54
 19        android:supportsRtl="true"
 19-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:10:9-35
-20        android:theme="@style/AppTheme" >
-20-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:11:9-40
-21        <activity android:name="com.example.movingimage.second_main" />
-21-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:9-58
-21-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:19-46
-22        <activity android:name="com.example.movingimage.Records" />
-22-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:13:9-45
-22-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:13:19-42
-23        <activity android:name="com.example.movingimage.EndGame" />
-23-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:14:9-45
-23-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:14:19-42
-24        <activity android:name="com.example.movingimage.Help" />
-24-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:15:9-42
-24-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:15:19-39
-25        <activity android:name="com.example.movingimage.Options" />
-25-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:16:9-45
-25-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:16:19-42
-26        <activity android:name="com.example.movingimage.Menu" >
-26-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:17:9-23:20
-26-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:17:19-39
-27            <intent-filter>
-27-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:18:13-22:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:19:17-69
-28-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:19:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:21:17-77
-30-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:21:27-74
-31            </intent-filter>
-32        </activity>
-33        <activity android:name="com.example.movingimage.second_main" />
-33-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:9-58
-33-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:19-46
-34        <activity
-34-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:25:9-28:72
-35            android:name="com.example.movingimage.MyApp"
-35-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:26:13-34
-36            android:screenOrientation="landscape"
-36-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:27:13-50
-37            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-37-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:28:13-69
-38    </application>
-39
-40</manifest>
+20        android:testOnly="true"
+21        android:theme="@style/AppTheme" >
+21-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:11:9-40
+22        <activity android:name="com.example.movingimage.second_main" />
+22-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:9-58
+22-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:19-46
+23        <activity android:name="com.example.movingimage.Records" />
+23-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:13:9-45
+23-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:13:19-42
+24        <activity android:name="com.example.movingimage.EndGame" />
+24-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:14:9-45
+24-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:14:19-42
+25        <activity android:name="com.example.movingimage.Help" />
+25-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:15:9-42
+25-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:15:19-39
+26        <activity android:name="com.example.movingimage.Options" />
+26-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:16:9-45
+26-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:16:19-42
+27        <activity android:name="com.example.movingimage.Menu" >
+27-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:17:9-23:20
+27-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:17:19-39
+28            <intent-filter>
+28-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:19:17-69
+29-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:19:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:21:17-77
+31-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity android:name="com.example.movingimage.second_main" />
+34-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:9-58
+34-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:12:19-46
+35        <activity
+35-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:25:9-28:72
+36            android:name="com.example.movingimage.MyApp"
+36-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:26:13-34
+37            android:screenOrientation="landscape"
+37-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:27:13-50
+38            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+38-->D:\JAVA\MovingImage\app\src\main\AndroidManifest.xml:28:13-69
+39    </application>
+40
+41</manifest>

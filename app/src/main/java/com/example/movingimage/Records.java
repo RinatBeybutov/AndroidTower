@@ -23,7 +23,7 @@ public class Records extends AppCompatActivity {
     private TextView textRecords4;
     private TextView textRecords5;
 
-    SharedPreferences mPreferences;
+    private SharedPreferences mPreferences;
 
     @SuppressLint("CommitPrefEdits")
     @Override

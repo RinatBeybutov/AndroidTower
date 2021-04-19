@@ -15,14 +15,14 @@ public class EndGame extends AppCompatActivity {
 
     private TextView textInfo;
 
-    SharedPreferences mPreferences;
+    private SharedPreferences mPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_game);
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         mPreferences = getSharedPreferences("mySettings", Context.MODE_PRIVATE);
 
@@ -52,7 +52,7 @@ public class EndGame extends AppCompatActivity {
         buttonRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), second_main.class);
+                Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +64,7 @@ public class EndGame extends AppCompatActivity {
 
                 if (newHighscore(steps, time)) {
                     SharedPreferences.Editor ed = mPreferences.edit();
-                    switch (second_main.countDisks) {
+                    switch (Main_Activity.countDisks) {
                         case 3:
                             ed.putString("record3", record);
                             break;
@@ -86,7 +86,7 @@ public class EndGame extends AppCompatActivity {
 
         String oldRecord = "";
 
-        switch (second_main.countDisks) {
+        switch (Main_Activity.countDisks) {
             case 3:
                 if (!mPreferences.contains("record3")) {
                     return true;
@@ -111,20 +111,11 @@ public class EndGame extends AppCompatActivity {
         }
 
         String[] array = oldRecord.split(" ");
-
         int oldSteps = Integer.parseInt(array[1]);
-
         String oldTime = array[3];
-
-        //System.out.println(oldTime + " || " + time);
-        //System.out.println(steps + " || " + oldSteps);
-        //System.out.println("Between steps " + (oldSteps >= steps));
-        //System.out.println("Between time " + oldTime.compareTo(time));
-
         if (oldSteps >= steps && oldTime.compareTo(time) > 0) {
             return true;
         }
-
         return false;
     }
 }

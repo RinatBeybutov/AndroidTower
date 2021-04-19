@@ -5,20 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-
-
-
 public class Options extends AppCompatActivity {
 
-    CheckBox checkSteps;
-    CheckBox checkChronometer;
+    private CheckBox checkSteps;
+    private CheckBox checkChronometer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +34,10 @@ public class Options extends AppCompatActivity {
         RadioButton button4 = findViewById(R.id.buttonCount4);
         RadioButton button5 = findViewById(R.id.buttonCount5);
 
-        checkChronometer.setChecked(second_main.enableChronometer);
-        checkSteps.setChecked(second_main.enableSteps);
+        checkChronometer.setChecked(Main_Activity.enableChronometer);
+        checkSteps.setChecked(Main_Activity.enableSteps);
 
-        switch (second_main.countDisks){
+        switch (Main_Activity.countDisks){
             case 3:
                 button3.setChecked(true);
                 break;
@@ -52,7 +48,6 @@ public class Options extends AppCompatActivity {
                 button5.setChecked(true);
                 break;
         }
-
 
         button3.setOnClickListener(buttonClickListener);
         button4.setOnClickListener(buttonClickListener);
@@ -77,15 +72,14 @@ public class Options extends AppCompatActivity {
             CheckBox checkBoxTmp = (CheckBox) v;
             switch (checkBoxTmp.getId()){
                 case R.id.checkBoxSteps:
-                    second_main.enableSteps = checkSteps.isChecked();
+                    Main_Activity.enableSteps = checkSteps.isChecked();
                     break;
                 case R.id.checkBoxChonometr:
-                    second_main.enableChronometer = checkChronometer.isChecked();
+                    Main_Activity.enableChronometer = checkChronometer.isChecked();
                     break;
             }
         }
     };
-
 
         View.OnClickListener buttonClickListener = new View.OnClickListener() {
         @Override
@@ -93,13 +87,13 @@ public class Options extends AppCompatActivity {
             RadioButton buttonTmp = (RadioButton) v;
             switch (buttonTmp.getId()){
                 case R.id.buttonCount3:
-                    second_main.countDisks = 3;
+                    Main_Activity.countDisks = 3;
                     break;
                 case R.id.buttonCount4:
-                    second_main.countDisks = 4;
+                    Main_Activity.countDisks = 4;
                     break;
                 case R.id.buttonCount5:
-                    second_main.countDisks = 5;
+                    Main_Activity.countDisks = 5;
                     break;
             }
         }

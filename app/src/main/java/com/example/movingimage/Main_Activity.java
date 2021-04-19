@@ -17,7 +17,7 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
-public class second_main extends AppCompatActivity {
+public class Main_Activity extends AppCompatActivity {
 
     public static boolean enableSteps = true;
     public static boolean enableChronometer = true;
@@ -41,29 +41,29 @@ public class second_main extends AppCompatActivity {
 
     private ImageView boxZero;
 
-    Block blockZero;
+    private Block blockZero;
 
-    Block blockL4;
-    Block blockL5;
-    Block blockL3;
-    Block blockL2;
-    Block blockL1;
+    private Block blockL4;
+    private Block blockL5;
+    private Block blockL3;
+    private Block blockL2;
+    private Block blockL1;
 
-    Block blockC4;
-    Block blockC5;
-    Block blockC3;
-    Block blockC2;
-    Block blockC1;
+    private Block blockC4;
+    private Block blockC5;
+    private Block blockC3;
+    private Block blockC2;
+    private Block blockC1;
 
-    Block blockR4;
-    Block blockR5;
-    Block blockR3;
-    Block blockR2;
-    Block blockR1;
+    private Block blockR4;
+    private Block blockR5;
+    private Block blockR3;
+    private Block blockR2;
+    private Block blockR1;
 
-    ArrayList<Block> listBlocksL = new ArrayList<>();
-    ArrayList<Block> listBlocksC = new ArrayList<>();
-    ArrayList<Block> listBlocksR = new ArrayList<>();
+    private  ArrayList<Block> listBlocksL = new ArrayList<>();
+    private ArrayList<Block> listBlocksC = new ArrayList<>();
+    private ArrayList<Block> listBlocksR = new ArrayList<>();
 
     private RelativeLayout layoutLeft;
     private RelativeLayout layoutCenter;
@@ -73,7 +73,6 @@ public class second_main extends AppCompatActivity {
     private POSITION CURRENT_POSITION = POSITION.LEFT;
     private boolean isUp = false;
 
-    //private TextView textPosition;
     private TextView textTime;
     private TextView textSteps;
 
@@ -136,10 +135,6 @@ public class second_main extends AppCompatActivity {
         layoutCenter = findViewById(R.id.layoutCenterTower);
         layoutRight = findViewById(R.id.layoutRightTower);
         upLayout = findViewById(R.id.upLayout);
-
-        //textPosition = findViewById(R.id.textView);
-        //textPosition.setText("1");
-        //textPosition.setTextSize(20f);
 
         textTime = findViewById(R.id.textTime);
         textTime.setTextSize(20f);
